@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho Sustentável - Open Source</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-area">
+            <span class="logo-icon">🌾</span>
+            <div>
+                <h1>AGRINHO <span class="highlight">SUSTENTÁVEL</span></h1>
+                <p class="subtitle">PROJETO ESCOLA ABERTA</p>
+            </div>
+        </div>
+        <div class="score-badge">
+            <span>🌱</span>
+            <span id="score-counter">150</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Introduction -->
+        <section class="card hero">
+            <div class="hero-header">
+                <span class="badge">CÓDIGO ABERTO</span>
+                <h2>Seja um Desenvolvedor do Agro! 🚀</h2>
+            </div>
+            <p>Este site foi criado de forma simples usando HTML, CSS e JavaScript puros. Você pode copiar o código, fazer modificações, criar novos simuladores e aprender programação enquanto preserva o meio ambiente!</p>
+        </section>
+
+        <div class="grid-sections">
+            <!-- Soil Simulator Area -->
+            <section class="card simulator">
+                <div class="section-title">
+                    <span class="icon">🚜</span>
+                    <h3>Simulador de Plantio Direto</h3>
+                </div>
+                <p class="description">Escolha o melhor método de manejo para proteger a lavoura e acumular nutrientes no solo:</p>
+                
+                <div class="options">
+                    <button class="option-btn" onclick="runSimulation('direto')">
+                        <strong>🌳 Plantio Direto</strong>
+                        <p>Plantação sobre a palhada anterior, sem arar o solo. Mantém umidade e micro-vida.</p>
+                    </button>
+                    <button class="option-btn btn-wrong" onclick="runSimulation('arado')">
+                        <strong>🚜 Aração Intensiva</strong>
+                        <p>Revolver o solo frequentemente. Expõe nutrientes ao vento e causa erosão severa.</p>
+                    </button>
+                </div>
+                
+                <div id="sim-feedback" class="feedback hidden"></div>
+            </section>
+
+            <!-- Quiz Interactive Module -->
+            <section class="card quiz">
+                <div class="section-title">
+                    <span class="icon">📝</span>
+                    <h3>Desafio Quiz Rápido</h3>
+                </div>
+                <div id="quiz-question-container">
+                    <p class="question" id="quiz-question">O que é a palha orgânica protetora sobre o terreno cultivado?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-opt" onclick="checkQuiz(0)">A) Lixo acumulado desnecessário</button>
+                        <button class="quiz-opt" onclick="checkQuiz(1)">B) Cobertura que amortece chuva forte e evita erosão</button>
+                        <button class="quiz-opt" onclick="checkQuiz(2)">C) Um combustível para queimadas agrícolas</button>
+                    </div>
+                </div>
+                <div id="quiz-feedback" class="feedback hidden"></div>
+            </section>
+        </div>
+
+        <!-- Local Leaderboard -->
+        <section class="card leaderboard">
+            <div class="section-title">
+                <span class="icon">🏆</span>
+                <h3>Ranking do Campo</h3>
+            </div>
+            <ul class="ranking-list">
+                <li class="ranking-item self">
+                    <span class="rank">1º</span>
+                    <span class="player-name">Você (Desenvolvedor)</span>
+                    <span class="points" id="rank-points">150 🌱</span>
+                </li>
+                <li class="ranking-item">
+                    <span class="rank">2º</span>
+                    <span class="player-name">Mariana Silva</span>
+                    <span class="points">120 🌱</span>
+                </li>
+                <li class="ranking-item">
+                    <span class="rank">3º</span>
+                    <span class="player-name">Lucas Oliveira</span>
+                    <span class="points">95 🌱</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Agrinho Sustentável - Código Livre para Alunos e Professores</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
